@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Motorista</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cpf</th>
+      <th>Tipo de caminhao</th>
+      <th>Ano</th>
+      <th>Marca</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @motorista.each do |motoristum| %>
+      <tr>
+        <td><%= motoristum.name %></td>
+        <td><%= motoristum.cpf %></td>
+        <td><%= motoristum.tipo_de_caminhao %></td>
+        <td><%= motoristum.ano %></td>
+        <td><%= motoristum.marca %></td>
+        <td><%= link_to 'Show', motoristum %></td>
+        <td><%= link_to 'Edit', edit_motoristum_path(motoristum) %></td>
+        <td><%= link_to 'Destroy', motoristum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Motoristum', new_motoristum_path %>

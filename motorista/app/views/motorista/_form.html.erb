@@ -1,0 +1,37 @@
+<%= form_for(@motoristum) do |f| %>
+  <% if @motoristum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@motoristum.errors.count, "error") %> prohibited this motoristum from being saved:</h2>
+
+      <ul>
+      <% @motoristum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br>
+    <%= f.text_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_de_caminhao %><br>
+    <%= f.text_field :tipo_de_caminhao %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.text_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :marca %><br>
+    <%= f.text_field :marca %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

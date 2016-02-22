@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @motoristum.name %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @motoristum.cpf %>
+</p>
+
+<p>
+  <strong>Tipo de caminhao:</strong>
+  <%= @motoristum.tipo_de_caminhao %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @motoristum.ano %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @motoristum.marca %>
+</p>
+
+<%= link_to 'Edit', edit_motoristum_path(@motoristum) %> |
+<%= link_to 'Back', motorista_path %>
