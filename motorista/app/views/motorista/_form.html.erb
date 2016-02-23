@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: 'Informe o seu nome' %>
   </div>
-  <div class="field">
-    <%= f.label :cpf %><br>
-    <%= f.text_field :cpf %>
+  <div class="form-group">
+    <%= f.label :cpf, class: 'control-label' %><br>
+    <%= f.text_field :cpf, class: "form-control", placeholder: 'Informe o seu CPF' %>
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_caminhao %><br>
-    <%= f.text_field :tipo_de_caminhao %>
+  <div class="form-group">
+    <%= f.label :tipo_de_caminhao, class: 'control-label' %><br>
+    <%= f.text_field :tipo_de_caminhao, class: "form-control", placeholder: 'Informe o tipo de caminhão' %>
   </div>
-  <div class="field">
-    <%= f.label :ano %><br>
-    <%= f.text_field :ano %>
+  <div class="form-group">
+    <%= f.label :ano, class: 'control-label' %><br>
+    <%= f.text_field :ano, class: "form-control", placeholder: 'Informe o ano do caminhão' %>
   </div>
-  <div class="field">
-    <%= f.label :marca %><br>
-    <%= f.text_field :marca %>
+  <div class="form-group">
+    <%= f.label :marca, class: 'control-label' %><br>
+    <%= f.text_field :marca, class: "form-control", placeholder: 'Informe a marca do caminhão' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+     <%= f.submit "Cadastre-se", class: 'btn btn-success' %>
   </div>
 <% end %>
